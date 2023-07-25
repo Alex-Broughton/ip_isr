@@ -283,7 +283,7 @@ class IsrStatisticsTask(pipeBase.Task):
                     osMean = afwMath.makeStatistics(overscanImage.image.array[:, column],
                                                     self.statType, self.statControl).getValue()
                     columns.append(column)
-                    values.append(gain * osMean)
+                    values.append(osMean)
 
                 # We want these relative to the readout corner.  If that's
                 # on the right side, we need to swap them.
