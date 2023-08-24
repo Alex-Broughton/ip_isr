@@ -1078,7 +1078,7 @@ class IsrTask(pipeBase.PipelineTask):
                         self.log.warning("Making DETECTOR level kernel from AMP based brighter "
                                          "fatter kernels.")
                         if detector==23:
-                            brighterFatterKernel.makeDetectorKernelFromAmpwiseKernels(detName, ampsToExclude=['C10','C17'])
+                            brighterFatterKernel.makeDetectorKernelFromAmpwiseKernels(detName, ampsToExclude=['C10','C17','C15'])
                         elif detector==9:
                             brighterFatterKernel.makeDetectorKernelFromAmpwiseKernels(detName, ampsToExclude=['C10','C13', 'C14', 'C05'])
                         else:

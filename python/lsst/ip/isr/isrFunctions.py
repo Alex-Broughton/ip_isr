@@ -769,6 +769,8 @@ def fluxConservingBrighterFatterCorrection(exposure, kernel, maxIter, threshold,
     (see DM-38555).
     """
     image = exposure.getMaskedImage().getImage()
+    
+    #kernel = numpy.transpose(kernel) # DANGER: This is a test of incorrect behavior
 
     # The image needs to be units of electrons/holes
     with gainContext(exposure, image, applyGain, gains):
